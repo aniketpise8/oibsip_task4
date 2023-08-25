@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet/less" type="text/css" href="less/login_registration.less" id="theme-stylesheet"/>
+    <script src="js/less.js"></script>
+    <script type="module" src="js/login_registration.js"></script>
+
+    <title>Login Page</title>
+</head>
+<body>
+    <main>
+        <div id="container">
+            <div id="toggle">
+                <button id="login_toggle_button">Login</button>
+                <button id="register_toggle_button">Register</button>
+            </div>
+            <div id="block">
+                <div id="login_block">
+                    <!-- Login Form -->
+                    <div id="input_block">
+                        <div class="input-field">
+                            <input type="text" id="login_username" required>
+                            <label>Username</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" id="login_password" required>
+                            <label>Password</label>
+                        </div>
+                    </div>
+                    <div id="button_block">
+                        <button id="submit_login">Login</button>
+                        <button id="forgot_password">Forgot Password?</button>
+                    </div>
+                </div>
+                <div id="register_block" style="display: none;">
+                    <!-- Registration Form -->
+                    <div id="input_block">
+                        <div class="input-field">
+                            <input type="text" id="first_name" required>
+                            <label>First Name</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="last_name" required>
+                            <label>Last Name</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="email" required>
+                            <label>Email Address</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="reg_username" required>
+                            <label>Username</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" id="reg_password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" id="confirm_password" required>
+                            <label>Confirm Password</label>
+                        </div>
+                    </div>
+                    <div id="button_block">
+                        <button id="submit_register">Register</button>
+                    </div>
+                </div>
+                <div id="forgot_password_block" style="display: none;">
+                    <!-- Forgot Password Form -->
+                    <div id="title">Forgot Password</div>
+                    <div>
+                        <div class="input-field">
+                            <input type="text" id="forgot_email" required>
+                            <label>Email Address</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="forgot_username" required>
+                            <label>Username</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" id="new_password" required>
+                            <label>New Password</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" id="confirm_new_password" required>
+                            <label>Confirm New Password</label>
+                        </div>
+                    </div>
+                    <div id="button_block">
+                        <button id="submit_forgot_password">Submit Data</button>
+                    </div>
+                </div>
+                <div id="user_data">
+                    Name: <span id="name"></span><br>
+                    Email Address: <span id="user_email"></span><br>
+                    Username: <span id="username"></span><br>
+                    Password: <span id="password"></span><br>
+                    <button id="logout">Logout</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,210 @@
+@color1: #1A1E21;
+@color2: #202225;
+@color3: #242A2D;
+@color4: #292B2F;
+@color5: #40444B;
+
+* {
+    color: #FFFFFF;
+
+    input, label {
+        background: @color2;
+    }
+
+    button {
+        font-weight: bold;
+    }
+}
+
+body {
+    margin: 0;
+
+    main {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: @color4;
+
+        #container {
+            width: 600px;
+            padding: 25px;
+            border-radius: 10px;
+            background: @color1;
+            box-shadow: 05px 05px 10px @color3,
+                -5px -5px 10px @color3;
+
+            #toggle {
+                columns: 2;
+                margin-bottom: 15px;
+
+                button {
+                    width: 100%;
+                    height: 45px;
+                    border: none;
+                    border-radius: 5px;
+                    background: none;
+                    border: 2px solid #91C1D9;
+                }
+
+                #login_toggle_button {
+                    background: #91C1D9;
+                }
+            }
+
+            #block {
+                .input-field {
+                    margin-bottom: 15px;
+                    display: flex;
+                    position: relative;
+
+                    input {
+                        width: 100%;
+                        padding: 10px 15px;
+                        border: 2px solid @color5;
+                        border-radius: 5px;
+                        outline: none;
+                        transition: border-color 0.3s;
+
+                        &:focus {
+                            border-color: #91C1D9;
+                        }
+
+                        &:valid {
+                            border-color: #AFE1AF;
+                        }
+
+                        &:focus~label,
+                        &:valid~label {
+                            top: 0;
+                            padding: 0 5px;
+                            color: @color1;
+                            background: #91C1D9;
+                            margin-left: 10px;
+                            font-size: small;
+                        }
+                    }
+
+                    label {
+                        margin-left: 15px;
+                        align-self: center;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        transition: top 0.3s, font-size 0.3s;
+                    }
+                }
+
+                #login_block {
+                    #button_block {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        button {
+                            &:first-child {
+                                width: 35%;
+                                padding: 10px;
+                                border-radius: 5px;
+                                border: 2px solid #EE6C4D;
+                                background: #EE6C4D;
+
+                                &:active {
+                                    opacity: 0.85;
+                                }
+                            }
+
+                            &:last-child {
+                                border: none;
+                                margin-right: 10px;
+                                width: fit-content;
+                                text-decoration: underline;
+                                background: none;
+
+                                &:hover {
+                                    color: #EE6C4D;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                #register_block {
+                    display: none;
+
+                    #input_block {
+                        columns: 2;
+                        margin-top: 10px;
+                    }
+
+                    #button_block {
+                        columns: 2;
+                        button {
+                            width: 50%;
+                            padding: 10px;
+                            border-radius: 5px;
+                            border: 2px solid #EE6C4D;
+                            background: #EE6C4D;
+
+                            &:active {
+                                opacity: 0.85;
+                            }
+                        }
+                    }
+                }
+
+                #forgot_password_block {
+                    display: none;
+
+                    #title {
+                        font-weight: bold;
+                        text-align: center;
+                        font-size: larger;
+                        text-decoration: underline;
+                        margin-bottom: 20px;
+                    }
+                    
+                    #button_block {
+                        columns: 2;
+                        button {
+                            width: 75%;
+                            padding: 10px;
+                            border-radius: 5px;
+                            border: 2px solid #EE6C4D;
+                            background: #EE6C4D;
+
+                            &:active {
+                                opacity: 0.85;
+                            }
+                        }
+                    }
+                }
+
+                #user_data {
+                    font-weight: bold;
+                    position: relative;
+                    display: none;
+
+                    br {
+                        margin-bottom: 10px;
+                    }
+
+                    span {
+                        font-weight: 400;
+                    }
+
+                    button {
+                        width: 100px;
+                        right: 0;
+                        bottom: 0;
+                        position: absolute;
+                        padding: 10px;
+                        border: 2px solid #EE6C4D;
+                        background: #EE6C4D;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
